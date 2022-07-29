@@ -1,0 +1,22 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Proyecto 3 Dashboard Ucamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGuere/Dashboard.git"
+  },
+  "keywords": [
+    "DashboardUcamp"
+  ],
+  "author": "Luis Guere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisGuere/Dashboard/issues"
+  },
+  "homepage": "https://github.com/LuisGuere/Dashboard#readme"
+}
