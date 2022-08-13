@@ -1,36 +1,61 @@
+const digiApi = "https://digimon-api.vercel.app/api/digimon";
+
+const digiName = document.getElementById('digiName');
 
 
-console.log("Esto está funcionando");
+const btnAllDigimons = document.getElementById('btnAllDigimons');
+const btnDigiCall = document.getElementById('btnDigiCall');
 
-let digivice = 'https://digimon-api.vercel.app/api/digimon/name/agumon';
-let digivice2 = 'https://digimon-api.vercel.app/api/digimon/name/gabumon';
-let digivice3 = 'https://digimon-api.vercel.app/api/digimon/name/tentomon';
+/*
+const digiCall = async (name, img, level) => {
+    const resp = await axios.get(`${digiApi}/name/${digiName}`);
+    return{
 
-
-fetch(digivice)
-    .then(Response => Response.json())
-    .then(data => console.log(data))
-
-
-const digiCall = async () => {
-    const responder = await fetch(digivice2);
-    const datos = await responder.json();
-    console.log(datos);
+        name: resp.name,
+        level: resp.level,
+        img: resp.img
+    }
 }
+*/
 
-console.log(digiCall());
+async function simpleDigimon() {
+    console.log(`${digiName.value}`)
+    try {
+      const response = await axios.get(`${digiApi}/name/${digiName.value}`);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 
-//Axios Response
 
-const peticionAxios = async () => {
-    const { data } = await axios.get(`${digivice3}`);
-    console.log(data);    
-}
+// sintaxis par ala rúbrica
+  const summonAll = async () => {
+    try {
+        const summonDigimon = await axios.get(`${digiApi}`)
+        return console.log(summonDigimon.data);
+        
+    } catch (error) {
+        console.log(error);        
+    }
+  }
 
 
-//sintaxis axios
+  const showDigimons = async () => {
+    const respuesta = await axios.get(`${digiApi}`);
+    return respuesta.data
+  }
 
-const getUsers = async () => {
-    const
-}
+  const printDigimon = () => {
+    digimons.map(digiApi)
+  }
+
+//console.log(digiCall());
+
+//https://digimon-api.vercel.app/
+console.log('parece que funciona');
+
+btnDigiCall.addEventListener('click', simpleDigimon);
+btnAllDigimons.addEventListener('click', summonAll);
+

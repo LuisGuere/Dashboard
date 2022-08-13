@@ -13,7 +13,7 @@
         <div class="col">
             <nav class="navbar navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Digivice</a>
+                  <a class="navbar-brand" href="#">Yu-Gi-Oh! Decks</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -22,16 +22,20 @@
                       <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Comparaciones</h5>
                       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
+                    <h1> By Type</h1>
                     <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Rockie</a>
+                          <a class="nav-link active" aria-current="page" href="#">Monster</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Mega</a>
+                          <a class="nav-link active" aria-current="page" href="#">Spell</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Ultra</a>
+                          <a class="nav-link active" aria-current="page" href="#">Trap</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Decks</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link active" aria-current="page" href="#">Card Comparator</a>
@@ -46,17 +50,25 @@
     <main class="container mt-5 pt-5">
         <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label" id="digiName"><h1>Digimon</h1></label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="numberhelp">
+              <label for="exampleInputEmail1" class="form-label" ><h1>Card</h1></label>
+              <input type="text" id="cardName" class="form-control" id="exampleInputEmail1" aria-describedby="numberhelp">
             </div>              
           </form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label" id="digiLevel"><h1>Nivel</h1></label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="texthelp">
           </div>                           
         </form>
-        <button class="btn btn-dark" id="btnDigiCall">Digi-Call</button>
-        <button class="btn btn-dark" id="btnAllDigimons">All Digimons</button>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-dark" id="btnDrawCard">Draw Card!</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-dark" id="btnAllCards">All Cards</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-dark" id="btnShowCard">Show Card</button>
+          </div>
+        </div>
         <!--
         <h1 class="h1">Card Types</h1>
 
@@ -127,7 +139,7 @@
           </div>
           -->
     </main>
-    <section class="showDigigitalMonsters">
+    <section class="" id="showTakenOut">
       
     </section>
     <footer class="footer fixed-bottom bg-dark">

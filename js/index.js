@@ -1,51 +1,80 @@
-const digiApi = "https://digimon-api.vercel.app/api/digimon"
+//Endpoints
 
-const digiName = document.getElementById('digiName');
+let localDeck = [];
+
+const cards = "https://db.ygoprodeck.com/api/v7/cardinfo.php?";
+const darkType = "";
+//Inputs
+const cardName = document.getElementById('cardName');
+const showTakenOut = document.getElementById('showTakenOut');
+//Botones
+const btnDrawCard = document.getElementById("btnDrawCard");
+const btnAllCards = document.getElementById("btnAllCards");
+const btnShowCard = document.getElementById("btnShowCard");
+
+//utils
+
+const getCardName = () => {
+  return cardName.value;
+};
 
 
-const btnAllDigimons = document.getElementById('btnAllDigimons');
-const btnDigiCall = document.getElementById('btnDigiCall');
+//events
 
+const drawCardEvent = async () => {
+  try {
+    const { data } = await drawCardApi();
+    console.log(data);    
+  } catch (error) {
+    console.log('No se puede encontrar la carta');
+  }
+}
+
+const allCardsEvent = async () => {
+  try {
+    const { data } = await allCardsApi();
+    console.log(data);    
+  } catch (error) {
+    console.log('No se pudieron mostrar las cartas');
+  }
+}
 /*
-const digiCall = async (name, img, level) => {
-    const resp = await axios.get(`${digiApi}/name/${digiName}`);
-    return{
+const showCardEvent = async () => {
+  try {
+      
 
-        name: resp.name,
-        level: resp.level,
-        img: resp.img
     }
+
+  } catch (error) {
+    console.log('No se puede invicar esa carta');
+  }
+ 
 }
 */
 
-async function simpleDigimon() {
-    try {
-      const response = await axios.get(`${digiApi}/name/${digiName}`);
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  }
 
 
-  const summonAll = async () => {
-    const summonDigimon = await axios.get(`${digiApi}`)
-    return console.log(summonDigimon.data);
-  }
+const showCardTest = async () => {
 
-  const showDigimons = async () => {
-    
-  }
+};
+//apis
 
-  const printDigimon = () => {
-    digimons.map(digiApi)
-  }
+const drawCardApi = async () => {
+    return await axios.get(`${cards}name=${getCardName()}`);  
+};
 
-//console.log(digiCall());
+const showCardApi = async () => {
+  return await axios.get(`${cards}name=${getCardName()}`);
+}
 
-//https://digimon-api.vercel.app/
-console.log('parece que funciona');
 
-btnDigiCall.addEventListener('click', simpleDigimon);
-btnAllDigimons.addEventListener('click', summonAll);
+const allCardsApi = async () => {
+  return await axios.get(`${cards}`);
+}
+
+btnDrawCard.addEventListener('click', drawCardEvent);
+btnAllCards.addEventListener('click', allCardsEvent);
+btnShowCard.addEventListener('click', showCardTest);
+
+console.log('Parece que funciona');
 
