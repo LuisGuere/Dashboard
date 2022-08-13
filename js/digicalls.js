@@ -29,3 +29,8 @@ const peticionAxios = async () => {
 }
 
 
+//sintaxis axios
+
+const getUsers = async () => {
+    const
+}
