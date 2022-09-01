@@ -26,20 +26,20 @@
                     <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="index.html">Monster</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="spell.html">Spell</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="trap.html">Trap</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="decks.html">Decks</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="cardcomparator.html">Card Comparator</a>
-                        </li>
+                            <a class="nav-link active" aria-current="page" href="index.html">Monster</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="spell.html">Spell</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="trap.html">Trap</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="decks.html">Decks</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="cardcomparator.html">Card Comparator</a>
+                          </li>
                       </ul>
                     </div>
                   </div>
@@ -47,44 +47,26 @@
               </nav>
         </div>
     </header>
-    <main class="container-fluid mt-5 pt-5">
-        <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label" ><h1>Card</h1></label>
-              <input type="text" id="cardName" class="form-control" id="exampleInputEmail1" aria-describedby="numberhelp">
-            </div>              
-          </form><!--
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="digiLevel"><h1>Nivel</h1></label>
-          </div>
-        -->                           
-        </form>
+    <main class="container mt-5 pt-5">
         <div class="row">
-          <div class="col">
-            <button class="btn btn-dark" id="btnDrawCard">Draw Card!</button>
-          </div>
-          <!--
-          <div class="col">
-            <button class="btn btn-dark" id="btnAllCards">All Cards</button>
-          </div>
-          <div class="col">
-            <button class="btn btn-dark" id="btnShowCard">Show Card</button>
-          </div>
-          -->
-        </div>        
-    </main>
+        </div>
+        
+        </main>              
     <section class="container-fluid" >
       <div class="row" id="showTakenOut">
-        
-      </div>      
+
+      </div>
+      <div>
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>    
     </section>
     <footer class="footer fixed-bottom bg-dark">
 
     </footer>
     <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/js/chart.js"></script>
 </body>
 </html>
